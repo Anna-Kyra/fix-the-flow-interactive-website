@@ -46,7 +46,15 @@
     --clr-background: #272932;
     --clr-text: #ecf8f8;
     --clr-secondary: #519879;
-    --clr-accent: #fb8b24;  
+    --clr-accent: #fb8b24; 
+    
+    /* COLOUR BREAKDOWN */
+
+    --clr-medewerkers: #97BAC9;
+    --clr-financiers: #C2C997;
+    --clr-leveranciers: #C99797;
+    --clr-klanten: #97C9A2;
+    --clr-omgeving: #C997BB;
     
     /* RADIUS */
     --btn-radius: 1000px;
@@ -80,120 +88,17 @@ html {
 
 body {
     background-color: var(--clr-background);
-    display: grid;
+    /* display: grid;
     grid-template-columns: 2fr 8fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "header main"
     "footer main"
-    ;
+    ; */
     height: 100vh;
     color: var(--clr-text);
-
+    overflow-wrap: break-word;
     /* overflow: hidden; */
-
-}
-
-header {
-    grid-area: header;
-    height: 100vh;
-    padding: 3em 2em;
-    border-right: 1px solid var(--clr-text);
-
-    & nav {
-        & ul {
-            list-style: none;
-            width: 100%;
-            margin-top: 3em;
-        }
-        
-        & li {
-
-            background-color: var(--clr-primary);
-            border-radius: var(--sec-radius);
-            margin-bottom: 1em;
-            display: flex;
-            overflow: hidden;
-        
-            &:hover {
-                filter: var(--btn-hover);
-            }
-        
-            &:active {
-                filter: var(--btn-active);
-            }
-            &:last-child {
-                margin: 3em 0 0 0;
-                position: relative;
-            }
-
-            & a {
-                text-decoration: none;
-                text-transform: uppercase;
-                padding: 0 .75em;
-                align-self: center;
-                color: var(--clr-background);
-            }
-        }
-
-        & .icon {
-            background-color: var(--clr-background);
-            padding: 1em;
-            height: 100%;
-            border: 3px solid var(--clr-primary);
-            border-radius: var(--sec-radius);
-        
-            & img {
-                display: block;
-                width: 25px;
-                height: 25px;
-            }  
-        }
-    }
-}
-
-main {
-    /* background-color: coral; */
-    grid-area: main;
-    width: 100%;
-    padding: 3em 2em;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    height: 100vh;
-}
-
-footer {
-    /* background-color: goldenrod; */
-    grid-area: footer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-    padding: 2.5em;
-    text-align: center;
-
-    & ul{
-        list-style: none;
-        margin-bottom: .5em;
-    }
-
-    & li {
-        display: inline-block;
-        margin:  0 .5em;
-
-        & a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: var(--clr-text);
-
-            &:hover {
-                color: var(--clr-primary);
-                text-decoration: underline;
-            }
-        }
-    }
-
-    
 
 }
 
@@ -216,6 +121,11 @@ h2 {
 
 h3 {
     font-size: 1.5em;
+}
+
+i {
+    font-weight: var(--thin);
+    font-style: italic;
 }
 
 hr {
@@ -272,6 +182,25 @@ hr {
         }
     }
 
+    &.annuleer {
+        background-color: transparent;
+        color: var(--clr-text);
+        font-size: 1em;
+        padding: 0;
+        text-transform: none;
+        display: flex;
+
+        &::after {
+            content: url(assets/icons/x.svg);
+            padding: 0 0  0 1em;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }  
+    }
+
+
     &.buttons p:first-child {
         margin: 0;
         padding: 0;
@@ -293,6 +222,26 @@ hr {
     display: block;
     background-color: var(--clr-secondary);
     height: 100%;
+}
+
+.primary {
+    background-color: var(--clr-primary);
+}
+
+.medewerkers {
+    background-color: var(--clr-medewerkers);
+}
+.financiers {
+    background-color: var(--clr-financiers);
+}
+.leveranciers {
+    background-color: var(--clr-leveranciers);
+}
+.klanten {
+    background-color: var(--clr-klanten);
+}
+.omgeving {
+    background-color: var(--clr-omgeving);
 }
 
 

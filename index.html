@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,13 +15,13 @@
             <a href="#"><h1>Hand- <br>
                 Footprint</h1></a>
             <ul>
-                <li><div class="icon"></div><a href="#">Bedrijf</a></li>
-                <li><div class="icon"></div><a href="#">Klanten</a></li>
-                <li><div class="icon"></div><a href="#">Leveranciers</a></li>
-                <li><div class="icon"><img src="styles/assets/icons/icons_medewerkers.svg" alt=""></div><a href="#">Medewerkers</a></li>
-                <li><div class="icon"></div><a href="#">Financiers</a></li>
-                <li><div class="icon"></div><a href="#">Omgeving</a></li>
-                <li class="meer"><div class="icon"></div><a href="#">Meer</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_bedrijf.svg" alt="bedrijf"></div><a href="#">Bedrijf</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_klanten.svg" alt="klanten"></div><a href="#">Klanten</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_leveranciers.svg" alt="leveranciers"></div><a href="#">Leveranciers</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_medewerkers.svg" alt="medewerkers"></div><a href="#">Medewerkers</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_aandeelhouders.svg" alt="financiers"></div><a href="#">Financiers</a></li>
+                <li><div class="icon"><img src="styles/assets/icons/icons_omgeving.svg" alt="omgeving"></div><a href="#">Omgeving</a></li>
+                <li class="meer"><div class="icon"><img src="styles/assets/icons/icons_meer.svg" alt="medewerkers"></div><a href="#">Meer</a></li>
             </ul>
         </nav>   
     </header>
@@ -30,7 +31,7 @@
             <i>overzicht van jouw hand - footprint calculatie</i>
         </section>
         <hr>
-        <section>
+        <section class="profile">
             <section>
                 <h2>John Doe</h2>
                     <h3>Bedrijf</h3>
@@ -39,7 +40,10 @@
                     <button type="button" class="button minor">Bewerken</button>
             </section>
             <div class="profile_foto">
-    
+
+            </div>
+            <div class="icon-bewerken">
+                <img src="styles/assets/icons/bewerken.svg" alt="bedrijf">
             </div>
         </section>
         <hr>
@@ -50,7 +54,7 @@
                 <span style="width: 25%;"></span>
             </div>
             <section class="hand-foot">
-                <section>
+                <section class="handprint">
                     <article></article>
                     <div class="leaderboard">
                         <article><span class="number">1.</span></article>
@@ -58,7 +62,7 @@
                         <article><span class="number">3.</span></article>
                     </div>
                 </section>
-                <section>
+                <section class="footprint">
                     <article></article>
                     <div class="leaderboard">
                         <article><span class="number">1.</span></article>
@@ -67,54 +71,55 @@
                     </div>
                 </section>
             </section>
-            <button type="button" class="button">Calculeer opnieuw!</button>
+            <button type="button" class="button" onclick="window.location.href='vragenlijst.html';">Calculeer opnieuw!</button>
         </section>
         <hr>
         <section class="breakdown">
             <h2>Breakdown</h2>
             <i>Je breakdown uitgelegd</i>
-            <div class="breakdown_handprint">
+            <section class="breakdown_handprint">
                 <h3>Handprint</h3>
                 <i>Je footprint is hetzelfde als ...kg</i>
                 <div class="progress-bar">
                     <span style="width: 25%;"></span>
                 </div>
                 <div class="breakdown_blocks">
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
+                    <article class="primary"></article>
+                    <article class="medewerkers"></article>
+                    <article class="financiers"></article>
+                    <article class="leveranciers"></article>
+                    <article class="klanten"></article>
+                    <article class="omgeving"></article>
                 </div>
 
-            </div>   
+            </section>   
 
-            <div class="breakdown_footprint">            
+            <section class="breakdown_footprint">            
                 <h3>Footprint</h3>
                 <i>Je footprint is hetzelfde als ...kg</i>
                 <div class="progress-bar">
                     <span style="width: 25%;"></span>
                 </div>
                 <div class="breakdown_blocks">
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
+                    <article class="primary"></article>
+                    <article class="medewerkers"></article>
+                    <article class="financiers"></article>
+                    <article class="leveranciers"></article>
+                    <article class="klanten"></article>
+                    <article class="omgeving"></article>
                 </div>
-            </div>
+            </section>
 
         </section>
     </main>
     <footer>
-        <li><a href="#">Onze Visie</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Privacy voorwaarde</a></li>   
-    </ul>
-    <p>&copy; 2023 CrossMarx</p>
+        <ul>
+            <li><a href="#">Onze Visie</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy voorwaarde</a></li>   
+        </ul>
+        <p>&copy; 2023 CrossMarx</p>
     </footer>
     
 </body>

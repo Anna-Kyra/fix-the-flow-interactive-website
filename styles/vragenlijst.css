@@ -1,0 +1,112 @@
+body {
+    padding: 3em 0;
+    overflow: hidden;
+}
+
+header {
+    width: 80%;
+    /* background-color: rebeccapurple; */
+    margin:auto;
+
+    & section {
+        display: flex;
+        justify-content: space-between;
+
+        & section {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            gap: 1em;
+
+            & p {
+                font-weight: bold;
+            } 
+        }
+    }
+}
+
+.q-icon {
+    display: inline-block;
+    background-color: var(--clr-primary);
+    padding: .5em 1em;
+    /* height: 100%; */
+    border: 3px solid var(--clr-primary);
+    border-radius: var(--sec-radius);
+    
+    & img {
+        display: block;
+        width: 25px;
+        height: 25px;
+        color: var(--clr-background);
+    }  
+}
+
+main {
+    width: 80%;
+    /* background-color: hotpink; */
+    margin:auto;
+    text-align: center;
+    align-items: center;
+
+    & section:nth-of-type(1) {
+        width: 80%;
+        min-width: 30em;
+        max-width: 50em;
+        margin: 1em auto;
+    }
+
+    & section:nth-of-type(2) {
+        display: block;
+        margin: auto;
+        max-width: 50em;
+        width: 100%;
+
+        & section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            margin: 1em 0;
+            width: 100%;
+            justify-content: center;
+            /* background-color: goldenrod; */
+            text-align: center;
+    
+            & img {
+                max-width: 7em;
+                border-radius: var(--sec-radius);
+            }
+        }
+    }
+
+    
+
+}
+
+
+footer {
+    position: absolute;
+    width: 80%;
+    /* height: 20px; */
+    bottom: 0;
+    margin: 2em auto;
+    left: 0;
+    right: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+
+    & section {
+        align-items: center;
+        display: grid;
+
+        & .q-icon {
+            align-self: center;
+            margin: auto;
+        }
+    }
+
+
+}
