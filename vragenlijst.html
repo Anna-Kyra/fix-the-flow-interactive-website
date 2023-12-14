@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/vragenlijst.css">
     <title>Document</title>
@@ -22,6 +22,7 @@
         </div>
     </header>
     <main>
+        <form>
         <fieldset>
             <legend>Aan welke SDG's wordt een <span class="positive">positieve</span> bijdrage geleverd 
                 doordat deze mensen bij jouw bedrijf werken? <strong>*</strong></legend>
@@ -29,47 +30,89 @@
                 Denk bijv aan het feit dat jouw bedrijf loon betaalt, waardoor SDG 1 en 2 worden geholpen. 
                 <br>Of kijk naar de arbeidsomstandigheden (buro, stoel, licht, werktijden)  waarmee SDG 3 wordt geholpen.
             </i>
-            <h4 id="choose">Kies 0 uit 5</h4>
-
-            <form name="main">
-                <label>
-                    <input type="checkbox" >
-                    Goal-01
-                </label>
-                <label>
-                    <input type="checkbox" >
-                    Goal-02
-                </label>
-                <label>
-                    <input type="checkbox" >
-                    Goal-03
-                </label>
-                <label>
-                    <input type="checkbox">
-                    Goal-04
-                </label>
-                <label>
-                    <input type="checkbox" >
-                    Goal-05
-                </label>
-                <label>
-                    <input type="checkbox">
-                    Goal-06
-                </label>
-                <label>
-                    <input type="checkbox" >
-                    Goal-07
-                </label>
-                <label>
-                    <input type="checkbox" >
-                    Goal-08
-                </label>
-                <br>
+            <section>
+                <h4 id="choose">Kies <output id="cijfer">0</output> uit 5</h4>
+                
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox">
+                        <!-- Goal-01 -->
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-01.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-02.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-03.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-04.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox" >
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-05.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-06.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-07.png" alt="bedrijf">
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-08.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-09.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-10.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-11.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-12.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-13.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-14.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-15.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-16.png" alt="bedrijf">
+                    </label> 
+                    <label>
+                        <input type="checkbox">
+                        <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-17.png" alt="bedrijf">
+                    </label> 
+                </div>
+            </section>
                 <label id="messageLabel"></label>
                 
-            </form>
-            <button class="button" onclick="countCheckboxes()">volgende vraag</button>
+            <section>
+                <button class="button">terug</button>
+                <button type="submit" class="button">volgende vraag</button>
+            </section>
         </fieldset>
+    </form>
         <section>
             <h3>
             </h3>
@@ -80,12 +123,10 @@
         <section>
 
             <!-- <section>
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-01.png" alt="bedrijf">
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-02.png" alt="bedrijf">
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-03.png" alt="bedrijf">
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-04.png" alt="bedrijf">
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-05.png" alt="bedrijf">
-                <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-06.png" alt="bedrijf">
+                
+                
+                
+                
                 <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-07.png" alt="bedrijf">
                 <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-08.png" alt="bedrijf">
                 <img src="styles/assets/images/SDG Icons 2019_WEB/E-WEB-Goal-09.png" alt="bedrijf">

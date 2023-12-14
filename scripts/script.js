@@ -1,42 +1,43 @@
-// window.addEventListener('DOMContentLoaded', function(){
-//     var checkboxes=document.querySelectorAll('input[type="checkbox]')
-//     var maxAllowed=3;
+let cijfer = document.querySelector('output')
+let goal = document.querySelectorAll("input[type='checkbox']")
 
-//     checkboxes.forEach(function(checkbox){
-//         checkbox.addEventListener('change',function(){
-//             var checkedCount=document.querySelectorAll('input[type="checkbox"]:checked').length;
-//             if(checkedCount>maxAllowed){
-//                 this.checked=false;
-//             }
-//             if(checkedCount==maxAllowed){
-//                 checkboxes.forEach(function(otherCheckbox){
-//                     if(!otherCheckbox.checked){
-//                         otherCheckbox.disabled=true;
-//                     }
-//                 });
-//                 updateLable("Maximum Selected Checkboxes Reached");
-//             }
-//             else{
-//                 checkboxes.forEach(function(otherCheckbox){
-//                     otherCheckbox.disabled=false;
-//                 });
-//                 updateLable("");
-//             }
-//         });
-//     });
-//     function updateLable(message){
-//         var label=document.getElementById('messagelabel');
-//         label.textContent=message;
-//     }
-// });
+let bereken = function() {
+    let totaal = 0;
 
-function countCheckboxes(){
-    var a = document.forms["main"];
-    var x = a.querySelectorAll('input[type="checkbox"]:checked');
-    var choose = document.getElementById('choose');
-    choose.textContent= `Kies ${x.length} uit 5`;
-    // console.log(`Kies ${x.length} uit 5`);
+    let geselecteerdeGoals = document.querySelectorAll('input[type="checkbox"]:checked');
+    let nietGoals = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+
+    geselecteerdeGoals.forEach(function(item) {
+        totaal = totaal += 1;
+    });
+
+    cijfer.innerHTML = totaal;
 }
-// choose.textContent= x.length;
 
-console.log('hi');
+
+goal.forEach(function(){
+    this.addEventListener('click', function(){
+        bereken();
+
+        let geselecteerdeGoals = document.querySelectorAll('input[type="checkbox"]:checked');
+        let nietGoals = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+
+        let max = 5;
+
+        if(geselecteerdeGoals.length >= max) {
+            nietGoals.forEach(function(otherCheckbox){
+                if(!otherCheckbox.checked){
+                    otherCheckbox.disabled = true;
+                    otherCheckbox.required = false;
+                }
+            });
+            console.log(nietGoals.length + "<")
+        } else {
+            nietGoals.forEach(function(otherCheckbox){
+                    otherCheckbox.disabled = false;
+                    otherCheckbox.required = true;
+            });
+            console.log(nietGoals.length + ">")
+        }
+    });
+});

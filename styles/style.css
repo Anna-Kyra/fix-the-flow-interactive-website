@@ -123,6 +123,10 @@ h3 {
     font-size: 1.5em;
 }
 
+h4 {
+    text-transform: uppercase;
+}
+
 i {
     font-weight: var(--thin);
     font-style: italic;
@@ -243,7 +247,6 @@ hr {
 .omgeving {
     background-color: var(--clr-omgeving);
 }
-
 
 @media screen {
     
