@@ -46,7 +46,9 @@ main {
     & fieldset {
         width: 100%;
         margin: 0em auto;
+        padding-bottom: 10em;
         border: none;
+
 
         & legend {
             max-width: 30em;
@@ -146,7 +148,7 @@ main {
 
 footer {
     background-color: var(--clr-background);
-    position: sticky;
+    position: fixed;
     width: 80%;
     /* height: 20px; */
     bottom: 0;
