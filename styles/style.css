@@ -248,6 +248,10 @@ hr {
     background-color: var(--clr-omgeving);
 }
 
+.visibility {
+    visibility: hidden;
+}
+
 @media screen {
     
 }
