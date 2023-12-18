@@ -65,7 +65,7 @@ main {
         & section:nth-of-type(1) {
             width: 80%;
             margin: 1em auto;
-
+            
             justify-self: center;
 
             & .checkboxes {

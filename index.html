@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/dashboard.css">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <title>Hand-footprint calculator</title>
 </head>
 <body>
 
@@ -46,28 +50,82 @@
                 <img src="styles/assets/icons/bewerken.svg" alt="bedrijf">
             </div>
         </section>
-        <hr>
-        <section>
-            <h2>Overzicht algemeen</h2>
-            <i>Lorem ipsum dolor sit amet.</i>
+        <section class="">
             <div class="progress-bar">
                 <span style="width: 25%;"></span>
             </div>
             <section class="hand-foot">
                 <section class="handprint">
-                    <article></article>
+                    <article>
+                        <h2>20 <span>%</span></h2>
+                        <img src="styles/assets/icons/hand.svg" alt="hand">
+                    </article>
                     <div class="leaderboard">
-                        <article><span class="number">1.</span></article>
-                        <article><span class="number">2.</span></article>
-                        <article><span class="number">3.</span></article>
+                        <article>
+                            <div>
+                                <img src="styles/assets/icons/icons_bedrijf_black.svg" alt="bedrijf">
+                                <h4>10 <strong>%</strong></h4>
+                            </div>
+                            <div>
+                                <span class="number">1.</span>
+                                <span><p>bedrijf</p></span>
+                            </div>
+                        </article>
+                        <article>
+                            <div>
+                                <img src="styles/assets/icons/icons_aandeelhouders_black.svg" alt="bedrijf">
+                                <h4>20 <strong>%</strong></h4>
+                            </div>
+                            <div>
+                                <span class="number">2.</span>
+                                <span><p>financiers</p></span>
+                            </div>
+                        </article>
+                        <article> <div>
+                            <img src="styles/assets/icons/icons_omgeving_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span class="number">3.</span>
+                            <span><p>Omgeving</p></span>
+                        </div>
+                    </article>
                     </div>
                 </section>
                 <section class="footprint">
-                    <article></article>
+                    <article>
+                        <h2>80 <span>%</span></h2>
+                        <img src="styles/assets/icons/foot.svg" alt="voet">
+                    </article>
                     <div class="leaderboard">
-                        <article><span class="number">1.</span></article>
-                        <article><span class="number">2.</span></article>
-                        <article><span class="number">3.</span></article>
+                        <article>
+                            <div>
+                            <img src="styles/assets/icons/icons_bedrijf_black.svg" alt="bedrijf">
+                            <h4>30 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span class="number">2.</span>
+                            <span><p>Bedrijf</p></span>
+                        </div>
+                        </article>
+                        <article><div>
+                            <img src="styles/assets/icons/icons_omgeving_black.svg" alt="bedrijf">
+                            <h4>20 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span class="number">2.</span>
+                            <span><p>Omgeving</p></span>
+                        </div>
+                        </article>
+                        <article><div>
+                            <img src="styles/assets/icons/icons_klanten_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span class="number">2.</span>
+                            <span><p>Klanten</p></span>
+                        </div>
+                        </article>
                     </div>
                 </section>
             </section>
@@ -81,15 +139,68 @@
                 <h3>Handprint</h3>
                 <i>Je footprint is hetzelfde als ...kg</i>
                 <div class="progress-bar">
-                    <span style="width: 25%;"></span>
+                    <span style="width: 10%;"></span>
+                    <span class="medewerkers" style="width: 15%;"></span>
+                    <span class="financiers" style="width: 20%;"></span>
+                    <span class="leveranciers" style="width: 30%;"></span>
+                    <span class="klanten" style="width: 10%;"></span>
+                    <span class="omgeving" style="width: 15%;"></span>
                 </div>
                 <div class="breakdown_blocks">
-                    <article class="primary"></article>
-                    <article class="medewerkers"></article>
-                    <article class="financiers"></article>
-                    <article class="leveranciers"></article>
-                    <article class="klanten"></article>
-                    <article class="omgeving"></article>
+                    <article class="primary">
+                        <div>
+                            <img src="styles/assets/icons/icons_bedrijf_black.svg" alt="bedrijf">
+                            <h4>10 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>bedrijf</p></span>
+                        </div>
+                    </article>
+                    <article class="medewerkers">
+                        <div>
+                            <img src="styles/assets/icons/icons_medewerkers_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>medewerkers</p></span>
+                        </div>
+                    </article>
+                    <article class="financiers">
+                        <div>
+                            <img src="styles/assets/icons/icons_aandeelhouders_black.svg" alt="bedrijf">
+                            <h4>20 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>financiers</p></span>
+                        </div>
+                    </article>
+                    <article class="leveranciers">
+                        <div>
+                            <img src="styles/assets/icons/icons_leveranciers_black.svg" alt="bedrijf">
+                            <h4>30 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>leveranciers</p></span>
+                        </div>
+                    </article>
+                    <article class="klanten">
+                        <div>
+                            <img src="styles/assets/icons/icons_klanten_black.svg" alt="bedrijf">
+                            <h4>10 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>klanten</p></span>
+                        </div>
+                    </article>
+                    <article class="omgeving">
+                        <div>
+                            <img src="styles/assets/icons/icons_omgeving_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>omgeving</p></span>
+                        </div>
+                    </article>
                 </div>
 
             </section>   
@@ -98,15 +209,68 @@
                 <h3>Footprint</h3>
                 <i>Je footprint is hetzelfde als ...kg</i>
                 <div class="progress-bar">
-                    <span style="width: 25%;"></span>
+                    <span style="width: 30%;"></span>
+                    <span class="medewerkers" style="width: 10%;"></span>
+                    <span class="financiers" style="width: 15%;"></span>
+                    <span class="leveranciers" style="width: 10%;"></span>
+                    <span class="klanten" style="width: 15%;"></span>
+                    <span class="omgeving" style="width: 20%;"></span>
                 </div>
                 <div class="breakdown_blocks">
-                    <article class="primary"></article>
-                    <article class="medewerkers"></article>
-                    <article class="financiers"></article>
-                    <article class="leveranciers"></article>
-                    <article class="klanten"></article>
-                    <article class="omgeving"></article>
+                    <article class="primary">
+                        <div>
+                            <img src="styles/assets/icons/icons_bedrijf_black.svg" alt="bedrijf">
+                            <h4>30 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>bedrijf</p></span>
+                        </div>
+                    </article>
+                    <article class="medewerkers">
+                        <div>
+                            <img src="styles/assets/icons/icons_medewerkers_black.svg" alt="bedrijf">
+                            <h4>10 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>medewerkers</p></span>
+                        </div>
+                    </article>
+                    <article class="financiers">
+                        <div>
+                            <img src="styles/assets/icons/icons_aandeelhouders_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>financiers</p></span>
+                        </div>
+                    </article>
+                    <article class="leveranciers">
+                        <div>
+                            <img src="styles/assets/icons/icons_leveranciers_black.svg" alt="bedrijf">
+                            <h4>10 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>leveranciers</p></span>
+                        </div>
+                    </article>
+                    <article class="klanten">
+                        <div>
+                            <img src="styles/assets/icons/icons_klanten_black.svg" alt="bedrijf">
+                            <h4>15 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>klanten</p></span>
+                        </div>
+                    </article>
+                    <article class="omgeving">
+                        <div>
+                            <img src="styles/assets/icons/icons_omgeving_black.svg" alt="bedrijf">
+                            <h4>20 <strong>%</strong></h4>
+                        </div>
+                        <div>
+                            <span><p>omgeving</p></span>
+                        </div>
+                    </article>
                 </div>
             </section>
 

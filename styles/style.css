@@ -29,14 +29,14 @@
 @font-face {
     font-family: "Halton";
     src: url(assets/fonts/Halton/Halton\ light.otf) format("opentype");
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Halton";
     src: url(assets/fonts/Halton/Halton\ light-italic.otf) format("opentype");
-    font-weight: 400;
+    font-weight: 100;
     font-style: italic;
 }
 
@@ -128,8 +128,11 @@ h4 {
 }
 
 i {
-    font-weight: var(--thin);
+    font-weight: 100;
     font-style: italic;
+    margin: 1em 0;
+
+
 }
 
 hr {
@@ -139,7 +142,7 @@ hr {
 
 /* BUTTON */  
 .button {
-    margin: 1em 0.5em;
+    margin: 2em 0.5em;
     padding: 0.75em 2em;
     font-size: .7em;
     text-transform: uppercase;
@@ -220,6 +223,8 @@ hr {
     overflow: hidden;
     margin: 1em 0;
 
+    display: flex;
+
 }
 
 .progress-bar span {
@@ -228,6 +233,8 @@ hr {
     height: 100%;
 }
 
+
+
 .primary {
     background-color: var(--clr-primary);
 }
@@ -235,6 +242,7 @@ hr {
 .medewerkers {
     background-color: var(--clr-medewerkers);
 }
+
 .financiers {
     background-color: var(--clr-financiers);
 }
